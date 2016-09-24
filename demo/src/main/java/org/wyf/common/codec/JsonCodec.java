@@ -1,4 +1,4 @@
-package com.wyf.common.codec;
+package org.wyf.common.codec;
 
 import com.google.gson.Gson;
 import java.lang.reflect.Type;

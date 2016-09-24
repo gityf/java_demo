@@ -1,4 +1,4 @@
-package com.wyf.json.entity;
+package org.wyf.json.entity;
 
 /**
  * Created by wyf on 16/9/15.
