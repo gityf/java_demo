@@ -11,6 +11,8 @@
     <properties>
         <gson.version>2.5</gson.version>
         <junit.version>4.11</junit.version>
+        <elasticsearch.verson>2.1.1</elasticsearch.verson>
+        <spring.version>4.2.4.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -34,6 +36,22 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-core-asl</artifactId>
             <version>1.9.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>${elasticsearch.verson}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.7</version>
         </dependency>
     </dependencies>
 
