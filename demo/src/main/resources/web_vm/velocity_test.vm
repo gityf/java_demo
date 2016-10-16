@@ -1,0 +1,102 @@
+#set($docDesc="VelocityTest")
+#set($docAuthor="Test")
+#set($docDateTime="2016-05-10 14:29:04")
+#set($docRemark="none")
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<style type="text/css">
+</style>
+<head>
+    <title>$!{name}</title>
+</head>
+<body>
+<table width="100%">
+    <tr>
+        <!-- Title -->
+        <td align="center"><b>Address Book - $!{name}</b></td>
+    </tr>
+    <tr>
+        <!-- BaseInfo -->
+        <td>
+            <table width="100%" height="100%">
+                <tr>
+                    <td width="10%">Name:</td>
+                    <td width="30%">$!{name}</td>
+                    <td width="10%">Gender:</td>
+                    <td width="30%">$!{gender}</td>
+                    <td width="20%" rowspan="4">
+                        <img src="$!{portraitPath}" height="120" width="100"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="10%">E-mail:</td>
+                    <td width="30%">$!{email}</td>
+                    <td width="10%">Job:</td>
+                    <td width="30%">$!{job}</td>
+                </tr>
+                <tr>
+                    <td width="10%">Company:</td>
+                    <td width="70%" colspan="3">$!{company}</td>
+                </tr>
+                <tr>
+                    <td width="10%">Address:</td>
+                    <td width="70%" colspan="3">$!{address}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <!-- Contact -->
+        <td>
+            <table width="100%" height="100%" >
+                <tr>
+                    <td width="10%" align="left" valign="top">
+                        Contact:
+                    </td>
+                    <td>
+                        <table width="100%" height="100%" >
+                            <tr>
+                                <th></th>
+                                <th align="left">Contact Type</th>
+                                <th align="left">Contact Code</th>
+                                <th></th>
+                            </tr>
+                            #foreach($contactItem in $contactItems.entrySet())
+                                <tr>
+                                    <td align="left" width="5%">$velocityCount</td>
+                                    <td align="left" width="20%">$contactItem.key</td>
+                                    <td align="left" width="30%">$contactItem.value</td>
+                                    <td></td>
+                                </tr>
+                            #end
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <!-- Remarks-->
+        <td>
+            <table width="100%" height="100%" >
+                <tr>
+                    <td width="10%" align="left" valign="top">
+                        Remark:
+                    </td>
+                    <td>
+                        <table width="100%" height="100%" >
+                            #foreach($remark in $remarks)
+                                <tr>
+                                    <td>[$velocityCount] $remark</td>
+                                </tr>
+                            #end
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

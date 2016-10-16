@@ -4,5 +4,5 @@
     <comment>elasticsearch的配置</comment>
     <entry key="client.transport.sniff">true</entry>
     <entry key="cluster.name">rainbow</entry>
-    <entry key="transport.addresses">127.0.0.1:9300</entry>
+    <entry key="transport.addresses">127.0.0.1:9200</entry>
 </properties>
