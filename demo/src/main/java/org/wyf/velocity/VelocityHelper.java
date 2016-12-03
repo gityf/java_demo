@@ -8,6 +8,9 @@ import org.apache.velocity.app.VelocityEngine;
 import java.io.File;
 import java.io.FileWriter;
 
+/**
+ * Created by wyf on 16/10/16.
+ */
 public class VelocityHelper {
     /**
      * 根据给定的vm模板和上下文生成html页面

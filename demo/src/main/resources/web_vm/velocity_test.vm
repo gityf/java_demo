@@ -1,5 +1,5 @@
 #set($docDesc="VelocityTest")
-#set($docAuthor="Test")
+#set($docAuthor="Tsybius2014")
 #set($docDateTime="2016-05-10 14:29:04")
 #set($docRemark="none")
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

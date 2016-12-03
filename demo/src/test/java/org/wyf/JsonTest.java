@@ -1,5 +1,6 @@
 package org.wyf;
 
+import com.alibaba.fastjson.JSON;
 import com.google.gson.reflect.TypeToken;
 import org.junit.Test;
 import org.wyf.common.codec.JsonCodec;
@@ -54,5 +55,19 @@ public class JsonTest {
                 System.out.println(key + ":" + map.get(key));
             }
         }
+    }
+
+    @Test
+    public void FastJsonDemo() {
+        List<Person> persons = new ArrayList<Person>();
+        for (int i = 0; i < 3; i++) {
+            Person p = new Person();
+            p.setName("name" + i);
+            p.setAge(i * 5);
+            persons.add(p);
+        }
+        String str = JSON.toJSONString(persons);
+        System.out.println(str);
+
     }
 }

@@ -5,6 +5,10 @@ import org.apache.velocity.VelocityContext;
 import java.util.HashMap;
 import java.util.Vector;
 
+/**
+ * Created by wyf on 16/10/16.
+ */
+
 public class VelocityTool {
     public static void main(String[] args) {
         try {
@@ -28,7 +32,7 @@ public class VelocityTool {
             vectorRemark.add("Kim was named the World's 46th Most Powerful Person by the Forbes list of The World's Most Powerful People in 2013");
             context.put("remarks", vectorRemark);
             VelocityHelper.generateHtml(
-                    "web_vm/velocity_test.vm",
+                    "velocity_test.vm",
                     "output.html",
                     context);
             System.out.println("生成完毕");
