@@ -7,6 +7,7 @@
     <groupId>com.wyf.json</groupId>
     <artifactId>json</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>java demo</name>
 
     <properties>
         <gson.version>2.5</gson.version>
@@ -73,6 +74,13 @@
             <groupId>org.apache.mina</groupId>
             <artifactId>mina-core</artifactId>
             <version>2.0.16</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba.rocketmq/rocketmq-client -->
+        <dependency>
+            <groupId>com.alibaba.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>3.2.6</version>
         </dependency>
 
     </dependencies>
