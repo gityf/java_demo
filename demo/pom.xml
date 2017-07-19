@@ -90,6 +90,13 @@
             <version>0.10.1.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-client -->
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-client</artifactId>
+            <version>5.14.5</version>
+        </dependency>
+
     </dependencies>
 
 </project>
