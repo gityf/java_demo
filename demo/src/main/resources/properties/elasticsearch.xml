@@ -3,6 +3,6 @@
 <properties>
     <comment>elasticsearch的配置</comment>
     <entry key="client.transport.sniff">true</entry>
-    <entry key="cluster.name">rainbow</entry>
-    <entry key="transport.addresses">127.0.0.1:9300</entry>
+    <entry key="cluster.name">altb1-comm-elasticsearch-2-3-3</entry>
+    <entry key="transport.addresses">10.104.112.235:9300,10.104.112.236:9300,10.104.112.237:9300</entry>
 </properties>
