@@ -28,6 +28,7 @@ public class ActiveMQProducer {
                 messageProducer.send(message);
                 System.out.println("producer-queue-msg=" + message.getText());
             }
+            connection.close();
         } catch (JMSException e) {
             e.printStackTrace();
         }

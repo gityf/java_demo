@@ -24,6 +24,10 @@
             var ta = document.getElementById('responseText');
             ta.value = ta.value + "连接被关闭";
         };
+        socket.onerror = function(event) {
+            var ta = document.getElementById('responseText');
+            ta.value = ta.value + "发生错误-连接被关闭";
+        };
     } else {
         alert("你的浏览器不支持 WebSocket！");
     }
