@@ -1,7 +1,6 @@
 package org.wyf;
 
 import org.junit.Test;
-import org.wyf.spider.TestDynamicIp;
 import org.wyf.spider.WebClientCrawler;
 
 /**
