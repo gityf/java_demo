@@ -9,6 +9,8 @@ public interface ISearch {
     int update(String index, String type, String id, Map<String, Object> data);
 
     int delete(String index, String type, String id);
-
+ 
     Map<String, Object> get(String index, String type, String id);
+    
+    long searchES(String index, String type);
 }

@@ -12,7 +12,7 @@
     <properties>
         <gson.version>2.5</gson.version>
         <junit.version>4.11</junit.version>
-        <elasticsearch.verson>2.1.1</elasticsearch.verson>
+        <elasticsearch.verson>2.3.3</elasticsearch.verson>
         <spring.version>4.2.4.RELEASE</spring.version>
     </properties>
     <dependencies>

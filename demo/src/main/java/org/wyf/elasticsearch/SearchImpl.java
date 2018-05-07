@@ -1,5 +1,7 @@
 package org.wyf.elasticsearch;
 
+import org.elasticsearch.action.count.CountRequestBuilder;
+import org.elasticsearch.action.count.CountResponse;
 /**
  * Created by wyf on 16/9/25.
  */
@@ -9,8 +11,12 @@ import org.elasticsearch.action.get.GetRequestBuilder;
 import org.elasticsearch.action.get.GetResponse;
 import org.elasticsearch.action.index.IndexRequestBuilder;
 import org.elasticsearch.action.index.IndexResponse;
+import org.elasticsearch.action.search.SearchRequestBuilder;
+import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.index.engine.VersionConflictEngineException;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.wyf.elasticsearch.search.SearchClientProvider;
@@ -26,6 +32,22 @@ public class SearchImpl implements ISearch {
     public  SearchImpl() {
         searchClientProvider = new SearchClientProvider();
         searchClientProvider.init();
+    }
+    
+    public void count(String index){
+    		TransportClient client = searchClientProvider.get();
+    	    CountRequestBuilder crb = client.prepareCount(index);
+    	    crb.execute().actionGet();
+    }
+    
+    public long searchES(String index, String type){
+    		TransportClient client = searchClientProvider.get();
+    		SearchRequestBuilder srb = client.prepareSearch(index)
+    				.setTypes(type)
+    				.setPreference("_replica")
+    				.setQuery(QueryBuilders.matchAllQuery());
+    		SearchResponse sr = srb.execute().actionGet();
+    		return sr.getHits().getTotalHits();
     }
 
     public Map<String, Object> save(String index, String type, String id, Map<String, Object> data) {
